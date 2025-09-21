@@ -9,7 +9,7 @@ except OSError:
     print("Warning: deeplearning.mplstyle not found. Using default style.")
 
 # Load 500-example dataset
-data = np.load('linear_regression_data.npz')
+data = np.load('./supervised_learning/linear_regression_data.npz')
 x_train = data['x_train']
 y_train = data['y_train']
 
