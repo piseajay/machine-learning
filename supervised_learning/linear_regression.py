@@ -8,10 +8,11 @@ try:
 except OSError:
     print("Warning: deeplearning.mplstyle not found. Using default style.")
 
-# x_train is the input variable (size in 1000 square feet)
-# y_train is the target (price in 1000s of dollars)
-x_train = np.array([1.0, 2.0])
-y_train = np.array([300.0, 500.0])
+# Load 500-example dataset
+data = np.load('linear_regression_data.npz')
+x_train = data['x_train']
+y_train = data['y_train']
+
 print(f"x_train = {x_train}")
 print(f"y_train = {y_train}")
 
@@ -36,8 +37,8 @@ plt.ylabel('Price (in 1000s of dollars)')
 plt.xlabel('Size (1000 sqft)')
 plt.show()
 
-w = 200
-b = 100
+w = 166
+b = 90
 print(f"w: {w}")
 print(f"b: {b}")
 
